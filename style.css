@@ -169,3 +169,7 @@ span{
     width: 300px;
   }
 }
+
+.list,.card,.btn{
+  display: none;
+}

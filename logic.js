@@ -5,7 +5,9 @@ let name_o=document.getElementById("name-o")
 let player_name_X=document.getElementById("player-name-X")
 let input_x=document.querySelector("main  input")
 let input_o=document.querySelector("span  input")
-
+let none=document.querySelector(" .btn")
+let card=document.querySelector(".card")
+let list=document.querySelector(".list")
 input_x.addEventListener("input",()=>{
     name_x.innerText=input_x.value
 })
@@ -17,6 +19,9 @@ input_o.addEventListener("input",()=>{
 
 document.getElementById("none").addEventListener("click",function(){
     document.getElementById("login").style.display="none"
+    list.style.display="flex"
+    none.style.display="flex"
+    card.style.display="flex"
 
 })
 
