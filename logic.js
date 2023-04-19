@@ -46,14 +46,11 @@ for(const item of gridItem){
     item.addEventListener("click",function(){
         if(gameIsFinished)return
 
-       audio.play()
-
-
-        
         let value=item.getAttribute("value")
         let index=value-1
    
         if(boardArray[index]=="x" || boardArray[index]=="o")return
+        audio.play()
         let squareContent=document.querySelector(`.square[value="${value}"] .square-content`)
         if(currentTurn=="x"){
             squareContent.style.color="red"
