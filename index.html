@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game X O</title>
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Shantell+Sans:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+          rel="stylesheet"
+        />
+        <!--// GOOGLE FONTS //-->
+
+          <!-- ALERTIFY JS -->
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <!--// ALERTIFY JS //-->
+    
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="game.png">
+  </head>
+  <body>
+    <section class="home">
+      <div class="about">
+        <div class="list">
+          <div class="div x">
+            <p>-</p>
+            <h2 id="index-x">X</h2>
+          </div>
+          <div class="div o">
+            <h2 id="index-o">O</h2>
+            <p>-</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div
+            class="square"
+            value="1"
+            style="border-top:none ;border-left:none ;"
+          >
+            <h3 class="square-content"></h3>
+          </div>
+
+          <div
+            class="square"
+            value="2"
+            style="border-top:none ;border-left:none ;border-right:none ;"
+          >
+            <h3 class="square-content"></h3>
+          </div>
+        
+          <div
+            class="square"
+            value="3"
+            style="border-top:none ;border-right:none ;"
+          >
+            <h3 class="square-content"></h3>
+          </div>
+          <div
+            class="square"
+            value="4"
+            style="border-top:none ;border-left:none ;"
+          >
+            <h3 class="square-content"></h3>
+          </div>
+          <div
+            class="square"
+            value="5"
+            style="border-top:none ;border-left:none ;border-right: none;"
+          >
+            <h3 class="square-content"></h3>
+          </div>
+          <div
+            class="square"
+            value="6"
+            style="border-top:none ;border-right:none ;"
+          >
+            <h3 class="square-content"></h3>
+          </div>
+          <div
+          class="square"
+          value="7"
+          style="border-top:none ;border-left:none ; border-bottom: none;"
+        >
+          <h3 class="square-content"></h3>
+        </div>
+        <div
+        class="square"
+        value="8"
+        style="border-top:none ;border-left:none ;border-bottom: none; border-right: none;"
+      >
+        <h3 class="square-content"></h3>
+      </div>
+      <div
+      class="square"
+      value="9"
+      style="border-top:none ;border-bottom: none; border-right: none;"
+      
+    >
+      <h3 class="square-content"></h3>
+    </div>
+        </div>
+        <button class="btn">reset</button>
+      </div>
+    </section>
+    <script src="logic.js"></script>
+  </body>
+</html>
