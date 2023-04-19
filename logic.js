@@ -1,5 +1,7 @@
 let gridItem=document.getElementsByClassName("square")
 let text=document.getElementsByClassName("square-content")
+let name_x=document.getElementById("name-x")
+let name_o=document.getElementById("name-o")
 let currentTurn="x"
 let gameIsFinished=false
 let index_X=0
@@ -10,8 +12,8 @@ let boardArray=[
     "6","7","8"
 ]
 if(currentTurn=="x"){
+    name_x.classList.add("color-name")
     document.querySelector(".x").classList.add("bord")
-    
 }
 for(const item of gridItem){
     item.addEventListener("click",function(){
@@ -38,10 +40,14 @@ for(const item of gridItem){
         }
 console.log(currentTurn);
         if(currentTurn=="x"){
+            name_x.classList.add("color-name")
+            name_o.classList.remove("color-name")
             document.querySelector(".x").classList.add("bord")
             document.querySelector(".o").classList.remove("bord")
            
         }else{
+            name_o.classList.add("color-name")
+            name_x.classList.remove("color-name")
             document.querySelector(".o").classList.add("bord")
             document.querySelector(".x").classList.remove("bord")
             
@@ -86,7 +92,11 @@ console.log(currentTurn);
           gameIsFinished=true
           isDraw=false
         setTimeout(()=>{
-            alertify.alert(`${winner} Won!`)
+            if(winner == "x"){
+                alertify.alert(`${name_x.innerText} Won!`)
+            }else{
+                alertify.alert(`${name_o.innerText} Won!`)
+            }
         },300)
         }
      
@@ -119,6 +129,13 @@ function reset(){
     }
     gameIsFinished=false
     currentTurn="x"
+    if(currentTurn=="x"){
+        name_x.classList.add("color-name")
+        name_o.classList.remove("color-name")
+        document.querySelector(".x").classList.add("bord")
+        document.querySelector(".o").classList.remove("bord")
+        
+    }
     // h.textContent=`${currentTurn} turn`
 
 }

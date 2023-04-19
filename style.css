@@ -93,3 +93,22 @@ h3 {
 .bord{
   border-bottom: 2px solid cyan;
 }
+
+#index-x,#index-o{
+  font-size: 1.8rem;
+}
+
+h4{
+  align-self: center ;
+}
+
+span{
+  align-self: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: aqua;
+}
+
+.color-name{
+  color: aqua;
+}
