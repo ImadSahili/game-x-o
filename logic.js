@@ -8,6 +8,9 @@ let input_o=document.querySelector("span  input")
 let none=document.querySelector(" .btn")
 let card=document.querySelector(".card")
 let list=document.querySelector(".list")
+let player_x=document.getElementById("player-x")
+let player_o=document.getElementById("player-o")
+
 input_x.addEventListener("input",()=>{
     name_x.innerText=input_x.value
 })
@@ -37,6 +40,7 @@ let boardArray=[
 if(currentTurn=="x"){
     name_x.classList.add("color-name")
     document.querySelector(".x").classList.add("bord")
+    player_x.classList.add("color-red")
 }
 for(const item of gridItem){
     item.addEventListener("click",function(){
@@ -61,19 +65,22 @@ for(const item of gridItem){
         }else{
             currentTurn = "x"
         }
-console.log(currentTurn);
+
         if(currentTurn=="x"){
             name_x.classList.add("color-name")
             name_o.classList.remove("color-name")
             document.querySelector(".x").classList.add("bord")
             document.querySelector(".o").classList.remove("bord")
+            player_x.classList.add("color-red")
+            player_o.classList.remove("color-green")
            
         }else{
             name_o.classList.add("color-name")
             name_x.classList.remove("color-name")
             document.querySelector(".o").classList.add("bord")
             document.querySelector(".x").classList.remove("bord")
-            
+            player_o.classList.add("color-green")
+            player_x.classList.remove("color-red")
         }
     })
 
@@ -114,7 +121,7 @@ console.log(currentTurn);
           }
           gameIsFinished=true
           isDraw=false
-        setTimeout(()=>{
+         setTimeout(()=>{
             if(winner == "x"){
                 alertify.alert(`${name_x.innerText} Won!`)
             }else{
@@ -157,7 +164,8 @@ function reset(){
         name_o.classList.remove("color-name")
         document.querySelector(".x").classList.add("bord")
         document.querySelector(".o").classList.remove("bord")
-        
+        player_x.classList.add("color-red")
+        player_o.classList.remove("color-green")
     }
     // h.textContent=`${currentTurn} turn`
 

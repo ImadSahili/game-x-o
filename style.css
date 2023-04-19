@@ -37,7 +37,7 @@
 .div {
   display: flex;
   justify-content: space-between;
-  width: 45%;
+  flex: 1;
   background-color: rgb(118, 168, 168);
   padding: 0.2rem 1rem;
   border-radius: 5px;
@@ -160,6 +160,12 @@ span{
     box-shadow: 1px 5px 5px black;
 }
 
+
+.div h2{
+  /* background-color: blue; */
+  align-self: center;
+}
+
 @media screen and (max-width: 575px){
 
   #login{
@@ -172,4 +178,13 @@ span{
 
 .list,.card,.btn{
   display: none;
+}
+
+
+.color-red{
+  color: red;
+}
+
+.color-green{
+  color: green;
 }
