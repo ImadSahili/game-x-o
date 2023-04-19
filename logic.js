@@ -15,6 +15,7 @@ if(currentTurn=="x"){
 }
 for(const item of gridItem){
     item.addEventListener("click",function(){
+        if(gameIsFinished)return
         let value=item.getAttribute("value")
         let index=value-1
    
