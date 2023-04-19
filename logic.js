@@ -10,7 +10,7 @@ let card=document.querySelector(".card")
 let list=document.querySelector(".list")
 let player_x=document.getElementById("player-x")
 let player_o=document.getElementById("player-o")
-
+let audio=document.querySelector("audio")
 input_x.addEventListener("input",()=>{
     name_x.innerText=input_x.value
 })
@@ -45,6 +45,11 @@ if(currentTurn=="x"){
 for(const item of gridItem){
     item.addEventListener("click",function(){
         if(gameIsFinished)return
+
+       audio.play()
+
+
+        
         let value=item.getAttribute("value")
         let index=value-1
    
