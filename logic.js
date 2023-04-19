@@ -2,10 +2,28 @@ let gridItem=document.getElementsByClassName("square")
 let text=document.getElementsByClassName("square-content")
 let name_x=document.getElementById("name-x")
 let name_o=document.getElementById("name-o")
+let player_name_X=document.getElementById("player-name-X")
+let input_x=document.querySelector("main  input")
+let input_o=document.querySelector("div  input")
+
+input_x.addEventListener("input",()=>{
+    name_x.innerText=input_x.value
+})
+
+input_o.addEventListener("input",()=>{
+    name_o.innerText=input_o.value
+})
+
+
+document.getElementById("none").addEventListener("click",function(){
+    document.getElementById("login").style.display="none"
+
+})
+
 let currentTurn="x"
 let gameIsFinished=false
 let index_X=0
-let index_O=0;
+let index_O=0; 
 let boardArray=[
     "0","1","2",
     "3","4","5",

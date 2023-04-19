@@ -14,12 +14,14 @@
 }
 
 .about {
+  position:relative;
   width: 600px;
   background-color: rgb(26, 66, 66);
   height: 530px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: .5rem;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #151426,-3px -3px 30px #151426;
@@ -111,4 +113,49 @@ span{
 
 .color-name{
   color: aqua;
+}
+
+#login{
+  position: absolute;
+  z-index: 10;
+  gap: .5rem;
+  margin-top: 3rem;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(7, 78, 78, 0.64);
+  gap: 1.5rem;
+  transition-duration:.3s;
+ 
+}
+
+#login input{ 
+  background-color:  rgb(118, 168, 168);
+  border: none;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+
+#none{
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(31, 134, 134);
+  transition: .2s;
+}
+
+#none:hover{
+  background-color: rgb(7, 78, 78);
+    box-shadow: 1px 5px 5px black;
 }
