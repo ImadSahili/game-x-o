@@ -31,7 +31,7 @@
 .list {
   margin-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 80%;
 }
 
@@ -186,6 +186,10 @@ span{
   color: green;
 }
 
+.span{
+  margin: 0 .6rem;
+}
+
 @media screen and (max-width: 575px){
 
   #login{
@@ -212,6 +216,10 @@ span{
 
   .div{
     gap: 8px;
+  }
+
+  .span{
+    margin: 0 .3rem;
   }
 }
 
