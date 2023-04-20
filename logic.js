@@ -11,6 +11,8 @@ let list=document.querySelector(".list")
 let player_x=document.getElementById("player-x")
 let player_o=document.getElementById("player-o")
 let audio=document.querySelector("audio")
+let img_success_x=document.getElementById("img-success-x")
+let img_success_o=document.getElementById("img-success-o")
 input_x.addEventListener("input",()=>{
     name_x.innerText=input_x.value
 })
@@ -44,7 +46,7 @@ if(currentTurn=="x"){
 }
 for(const item of gridItem){
     item.addEventListener("click",function(){
-        if(gameIsFinished)return
+        if(gameIsFinished)return 
 
         let value=item.getAttribute("value")
         let index=value-1
@@ -114,6 +116,17 @@ for(const item of gridItem){
             index_X++
           }else{
             index_O++
+          }
+
+          if(index_X > index_O){
+            img_success_x.style.display="block"
+            img_success_o.style.display="none"
+          }else if(index_X < index_O){
+            img_success_o.style.display="block"
+            img_success_x.style.display="none"
+          }else if(index_X == index_O){
+            img_success_o.style.display="none"
+            img_success_x.style.display="none"
           }
           if(index_X != 0){
             document.getElementById("index-x").innerHTML=index_X

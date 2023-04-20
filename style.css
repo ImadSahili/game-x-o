@@ -42,6 +42,7 @@
   background-color: rgb(118, 168, 168);
   padding: 0.2rem 1rem;
   border-radius: 5px;
+  position: relative;
 }
 
 
@@ -167,14 +168,9 @@ span{
   align-self: center;
 }
 
-@media screen and (max-width: 575px){
-
-  #login{
-    width: 90%;
-  }
-  #login input{
-    width: 300px;
-  }
+#img-success-x,#img-success-o{
+  display: none;
+  width: 2rem;
 }
 
 .list,.card,.btn{
@@ -184,8 +180,34 @@ span{
 
 .color-red{
   color: red;
-}
+} 
 
 .color-green{
   color: green;
 }
+
+@media screen and (max-width: 575px){
+
+  #login{
+    width: 90%; 
+  }
+  #login input{
+    width: 300px;
+  }
+
+  #img-success-x{
+    display: none;
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+   
+  }
+
+  #img-success-o{
+    display: none;
+    position: absolute;
+    top: -1.2rem;
+    right: 0;
+  }
+}
+
