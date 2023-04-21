@@ -138,9 +138,9 @@ for(const item of gridItem){
           isDraw=false
          setTimeout(()=>{
             if(winner == "x"){
-                alertify.alert(`${name_x.innerText} Won!`)
+                alertify.alert(`${name_x.innerText} Won &#127942;`)
             }else{
-                alertify.alert(`${name_o.innerText} Won!`)
+                alertify.alert(`${name_o.innerText} Won &#127942;`)
             }
         },300)
         }
