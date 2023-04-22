@@ -233,10 +233,11 @@ label{
 
   #login{
     width: 90%; 
-    -webkit-gap: 1.5rem;
+    -webkit-column-gap:1.5rem;
   }
   #login input{
     width: 300px;
+    background-color: red;
   }
 
   #img-success-x{
