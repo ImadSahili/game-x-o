@@ -138,9 +138,9 @@ for(const item of gridItem){
           isDraw=false
          setTimeout(()=>{
             if(winner == "x"){
-                alertify.alert(`${name_x.innerText} Won &#127942;`)
+                alertify.alert("Geme X O",`${name_x.innerText} Won &#127942;`)
             }else{
-                alertify.alert(`${name_o.innerText} Won &#127942;`)
+                alertify.alert("Geme X O",`${name_o.innerText} Won &#127942;`)
             }
         },300)
         }
@@ -148,7 +148,7 @@ for(const item of gridItem){
         if(isDraw){
             gameIsFinished=true
             setTimeout(()=>{
-                alertify.alert("draw")
+                alertify.alert("Geme X O","draw")
             },300)
         }
 
