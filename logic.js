@@ -2,7 +2,6 @@ let gridItem=document.getElementsByClassName("square")
 let text=document.getElementsByClassName("square-content")
 let name_x=document.getElementById("name-x")
 let name_o=document.getElementById("name-o")
-let player_name_X=document.getElementById("player-name-X")
 let input_x=document.querySelector("main  input")
 let input_o=document.querySelector("span  input")
 let none=document.querySelector(" .btn")
@@ -13,12 +12,36 @@ let player_o=document.getElementById("player-o")
 let audio=document.querySelector("audio")
 let img_success_x=document.getElementById("img-success-x")
 let img_success_o=document.getElementById("img-success-o")
+let currentTurn="x"
+let gameIsFinished=false
+let index_X=0
+let index_O=0; 
+let label_x=document.querySelector("main label")
+let label_o=document.querySelector("span label")
+
+
+
 input_x.addEventListener("input",()=>{
     name_x.innerText=input_x.value
+
+    if(input_x.value != ""){
+        label_x.style.display="none"
+    }
+    if(input_x.value == ""){
+        label_x.style.display="block"
+    }
+    
 })
 
 input_o.addEventListener("input",()=>{
     name_o.innerText=input_o.value
+
+    if(input_o.value != ""){
+        label_o.style.display="none"
+    }
+    if(input_o.value == ""){
+        label_o.style.display="block"
+    }
 })
 
 
@@ -27,18 +50,17 @@ document.getElementById("none").addEventListener("click",function(){
     list.style.display="flex"
     none.style.display="flex"
     card.style.display="flex"
-
 })
 
-let currentTurn="x"
-let gameIsFinished=false
-let index_X=0
-let index_O=0; 
+
+
 let boardArray=[
     "0","1","2",
     "3","4","5",
     "6","7","8"
 ]
+
+
 if(currentTurn=="x"){
     name_x.classList.add("color-name")
     document.querySelector(".x").classList.add("bord")
@@ -138,7 +160,9 @@ for(const item of gridItem){
           isDraw=false
          setTimeout(()=>{
             if(winner == "x"){
-                alertify.alert("Geme X O",`${name_x.innerText} Won &#127942;`)
+                // alertify.alert(`${name_x.innerText} Won &#127942;`)
+                alertify.alert( "Geme X O",`${name_x.innerText} Won &#127942;`);
+
             }else{
                 alertify.alert("Geme X O",`${name_o.innerText} Won &#127942;`)
             }

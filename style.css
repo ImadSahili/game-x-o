@@ -16,7 +16,7 @@
 
 .about {
   position:relative;
-  width: 600px;
+  width: 600px ;
   background-color: rgb(26, 66, 66);
   height: 530px;
   display: flex;
@@ -101,6 +101,8 @@ h3 {
   font-size: 1.8rem;
 }
 
+
+
 h4{
   align-self: center ;
 }
@@ -142,7 +144,44 @@ span{
   height: 30px;
   border-radius: 5px;
   padding: .5rem;
+  position: relative;
 }
+
+#login input:focus{
+  outline: none;
+   border: 1.5px solid cyan;
+}
+
+main{
+  position: relative;
+}
+
+#span{
+  position: relative;
+  font-size:16px;
+  font-weight:normal ;
+}
+
+label{
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  color: #e8e8e8;
+  pointer-events:none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(.4,0,.2,1);
+}
+
+
+
+#login input:focus ~ #label{
+  transform: translateY(-50%) scale(.8);
+  padding: 0 .2rem;
+}
+
+
+
+
 
 
 #none{
