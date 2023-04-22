@@ -10,22 +10,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Shantell Sans', cursive;
+  font-family: "Shantell Sans", cursive;
   user-select: none;
 }
 
 .about {
-  position:relative;
-  width: 600px ;
+  position: relative;
+  width: 600px;
   background-color: rgb(26, 66, 66);
   height: 530px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: .5rem;
+  margin: 0.5rem;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px #151426,-3px -3px 30px #151426;
+  box-shadow: 5px 5px 10px #151426, -3px -3px 30px #151426;
 }
 
 .list {
@@ -45,7 +45,6 @@
   position: relative;
 }
 
-
 .card {
   margin-top: 3rem;
   width: 80%;
@@ -61,67 +60,63 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .3s;   
+  transition: 0.3s;
 }
 
-.square:hover{
-    background-color: rgb(118, 168, 168);
-    cursor: pointer;
-  
+.square:hover {
+  background-color: rgb(118, 168, 168);
+  cursor: pointer;
 }
 
 h3 {
- font-size: 3.2rem;
+  font-size: 3.2rem;
 }
 
-
-.btn{
-    margin-top: 2rem;
-    padding: .8rem 2rem;
-    border-radius: 20px;
-    border: none;
-    background-color: rgb(118, 168, 168);
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: .2s;
+.btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(118, 168, 168);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.btn:hover{
-    background-color: rgb(7, 78, 78);
-    box-shadow: 1px 5px 5px black;
+.btn:hover {
+  background-color: rgb(7, 78, 78);
+  box-shadow: 1px 5px 5px black;
 }
 
-
-.bord{
+.bord {
   border-bottom: 2px solid cyan;
 }
 
-#index-x,#index-o{
+#index-x,
+#index-o {
   font-size: 1.8rem;
 }
 
-
-
-h4{
-  align-self: center ;
+h4 {
+  align-self: center;
 }
 
-span{
+span {
   align-self: center;
   font-size: 1.8rem;
   font-weight: bold;
   color: aqua;
 }
 
-.color-name{
+.color-name {
   color: aqua;
 }
 
-#login{
+#login {
   position: absolute;
   z-index: 10;
-  gap: .5rem;
+  gap: 0.5rem;
   margin-top: 3rem;
   width: 80%;
   height: 300px;
@@ -133,132 +128,128 @@ span{
   background-color: rgba(7, 78, 78, 0.64);
   gap: 1.5rem;
   border-radius: 20px;
-  transition-duration:.3s;
- 
+  transition-duration: 0.3s;
 }
 
-#login input{ 
-  background-color:  rgb(118, 168, 168);
+#login input {
+  background-color: rgb(118, 168, 168);
   border: none;
   width: 300px;
   height: 30px;
   border-radius: 5px;
-  padding: .5rem;
+  padding: 0.5rem;
   position: relative;
 }
 
-#login input:focus{
+#login input:focus {
   outline: none;
-   border: 1.5px solid cyan;
+  border: 1.5px solid cyan;
 }
 
-main{
+main {
   position: relative;
 }
 
-#span{
+#span {
   position: relative;
-  font-size:16px;
-  font-weight:normal ;
+  font-size: 16px;
+  font-weight: normal;
 }
 
-label{
+label {
   position: absolute;
   top: -10px;
   left: 5px;
   color: #e8e8e8;
-  pointer-events:none;
+  pointer-events: none;
   transform: translateY(1rem);
-  transition: 150ms cubic-bezier(.4,0,.2,1);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
-#login input:focus ~ #label{
-  transform: translateY(-50%) scale(.8);
-  padding: 0 .2rem;
+#login input:focus ~ #label {
+  transform: translateY(-50%) scale(0.8);
+  padding: 0 0.2rem;
 }
 
-
-
-
-
-
-#none{
+#none {
   width: 300px;
   height: 30px;
   border-radius: 5px;
   border: none;
+  outline: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
   background-color: rgb(31, 134, 134);
-  transition: .2s;
+  transition: 0.2s;
 }
 
 #none:hover{
   background-color: rgb(7, 78, 78);
-    box-shadow: 1px 5px 5px black;
+  box-shadow: 1px 5px 5px black;
+
 }
 
+#none:focus-visible{
+  border: 1.5px solid cyan;
+}
 
-.div h2{
+.div h2 {
   /* background-color: blue; */
   align-self: center;
 }
 
-#img-success-x,#img-success-o{
+#img-success-x,
+#img-success-o {
   display: none;
   width: 2rem;
 }
 
-.list,.card,.btn{
+.list,
+.card,
+.btn {
   display: none;
 }
 
-
-.color-red{
+.color-red {
   color: red;
-} 
+}
 
-.color-green{
+.color-green {
   color: green;
 }
 
-.span{
-  margin: 0 .6rem;
+.span {
+  margin: 0 0.6rem;
 }
 
-@media screen and (max-width: 575px){
-
-  #login{
-    width: 90%; 
+@media screen and (max-width: 575px) {
+  #login {
+    width: 90%;
   }
-  #login input{
+  #login input {
     width: 300px;
   }
 
-  #img-success-x{
+  #img-success-x {
     display: none;
     position: absolute;
     top: -1.2rem;
     left: 0;
-   
   }
 
-  #img-success-o{
+  #img-success-o {
     display: none;
     position: absolute;
     top: -1.2rem;
     right: 0;
   }
 
-  .div{
+  .div {
     gap: 8px;
   }
 
-  .span{
-    margin: 0 .3rem;
+  .span {
+    margin: 0 0.3rem;
   }
 }
-

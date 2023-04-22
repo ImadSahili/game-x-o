@@ -46,10 +46,14 @@ input_o.addEventListener("input",()=>{
 
 
 document.getElementById("none").addEventListener("click",function(){
+    document.getElementById("none").style.background="rgb(7, 78, 78)"
+    document.getElementById("none").style.boxShadow="1px 5px 5px black"
+   setTimeout(()=>{
     document.getElementById("login").style.display="none"
     list.style.display="flex"
     none.style.display="flex"
     card.style.display="flex"
+   },1000)
 })
 
 
