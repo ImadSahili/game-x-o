@@ -233,6 +233,7 @@ label{
 
   #login{
     width: 90%; 
+    -webkit-gap: 1.5rem;
   }
   #login input{
     width: 300px;
